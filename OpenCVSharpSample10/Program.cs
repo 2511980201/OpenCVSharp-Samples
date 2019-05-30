@@ -35,8 +35,8 @@ namespace OpenCVSharpSample10
                             });
 
 
-                        brightnessTrackbar.Callback.DynamicInvoke(brightness);
-                        contrastTrackbar.Callback.DynamicInvoke(contrast);
+                        brightnessTrackbar.Callback.GetInvocationList();// DynamicInvoke(brightness);
+                        contrastTrackbar.Callback.GetInvocationList();//.DynamicInvoke(contrast);
 
                         Cv2.WaitKey();
                     }

@@ -57,10 +57,10 @@ namespace OpenCVSharpSample09
                            window.Image = dst;
                        });
 
-                    angleTrackbar.Callback.DynamicInvoke(0);
-                    scaleTrackbar.Callback.DynamicInvoke(1);
-                    resizeTrackbar.Callback.DynamicInvoke(1);
-                    blurTrackbar.Callback.DynamicInvoke(1);
+                    angleTrackbar.Callback.GetInvocationList();// DynamicInvoke(1);
+                    scaleTrackbar.Callback.GetInvocationList();
+                    resizeTrackbar.Callback.GetInvocationList();
+                    blurTrackbar.Callback.GetInvocationList();
 
                     Cv2.WaitKey();
                 }

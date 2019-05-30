@@ -73,8 +73,8 @@ namespace OpenCVSharpSample08
 
                 for (; ; )
                 {
-                    openCloseTrackbar.Callback.DynamicInvoke(0);
-                    erodeDilateTrackbar.Callback.DynamicInvoke(0);
+                    openCloseTrackbar.Callback.GetInvocationList();//.DynamicInvoke(null);
+                    erodeDilateTrackbar.Callback.GetInvocationList();//.DynamicInvoke(null);
 
                     var key = Cv2.WaitKey();
 
